@@ -6,6 +6,10 @@ test("greet formats a name", () => {
   assert.equal(greet(" Rio88 "), "Hello, Rio88!");
 });
 
+test("greet normalizes repeated spaces", () => {
+  assert.equal(greet("  Rio88   GitHub  "), "Hello, Rio88 GitHub!");
+});
+
 test("greet refuses empty names", () => {
   assert.throws(() => greet("  "), TypeError);
 });
